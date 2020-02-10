@@ -22,4 +22,19 @@ Route::get('hi', function () {
 Route::get('ID/{id}', function ($id) {
     return 'ID anda : '.$id;
 });
+
 Route::get('viewcontroll', 'MyfirstController@index');
+
+Route::get('tampilnama', 'MyfirstController@nama');
+
+Route::get('matkul', 'MyFirstController@matkul');
+
+Route::get('getname/{nama}', 'MyFirstController@getNameFromUrl');
+
+Route::get('formulir', 'MyFirstController@formulir');
+
+Route::post('formulir/proses', 'MyFirstController@proses');
+
+Route::get('home', 'MyfirstController@home');
+
+Route::get('tentang', 'MyfirstController@tentang');
