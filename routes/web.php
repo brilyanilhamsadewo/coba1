@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('myView', function () {
+    return view('webtest');
 });
+
+Route::get('hi', function () {
+    return "lagi belajar nih ye...";
+});
+
+Route::get('ID/{id}', function ($id) {
+    return 'ID anda : '.$id;
+});
+Route::get('viewcontroll', 'MyfirstController@index');
