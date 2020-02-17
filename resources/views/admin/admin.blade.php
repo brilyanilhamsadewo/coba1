@@ -8,6 +8,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!--  jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+<!-- Bootstrap Date-Picker Plugin -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 
   <title>AdminLTE 3 | Starter</title>
 
@@ -96,6 +105,51 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- /.col-md-6 -->
         </div>
         <!-- /.row -->
+        <div class="row">
+              <div class="col-sm-6">
+                <h3>Silahkan isi Form Ini</h3>
+                <form>
+                  <div class="form-group row">
+                    <label for="Nama" class="col-sm-2 col-form-label">Nama</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="Nama">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="Email" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="Email">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="Telepon" class="col-sm-2 col-form-label">Telepon</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="Telepon">
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="Tanggal Lahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
+                    <div class="col-sm-10">
+                      <input type="date" class="form-control" id="Tanggal Lahir">
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="Tanggal Lahir" class="col-sm-2 col-form-label">Jenis Kelamin</label>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                      <label class="form-check-label" for="inlineRadio1">Laki</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                      <label class="form-check-label" for="inlineRadio2">Perempuan</label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit Data</button>
+                </form>
+              </div>      
+        </div>
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content -->
@@ -122,5 +176,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="assets/dist/js/adminlte.min.js"></script>
+<!-- Date Picker -->
+<script>
+  $(document).ready(function(){
+    var date_input=$('input[name="date"]'); //our date input has the name "date"
+    var container=$('.content form').length>0 ? $('.content form').parent() : "body";
+    var options={
+      format: 'mm/dd/yyyy',
+      container: container,
+      todayHighlight: true,
+      autoclose: true,
+    };
+    date_input.datepicker(options);
+  })
+</script>
+
 </body>
 </html>
