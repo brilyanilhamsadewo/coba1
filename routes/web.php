@@ -38,3 +38,18 @@ Route::post('formulir/proses', 'MyFirstController@proses');
 Route::get('home', 'MyfirstController@home');
 
 Route::get('tentang', 'MyfirstController@tentang');
+
+Route::get('admin', function () {
+    return view('admin/admin');
+});
+
+Route::get('header', function () {
+    return view('admin/header');
+});
+
+Route::get('sidebar', function () {
+    return view('admin/sidebar');
+});
+Route::get('footer', function () {
+    return view('admin/footer');
+});
