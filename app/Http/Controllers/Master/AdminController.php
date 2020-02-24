@@ -14,7 +14,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        echo("Ini halaman index");
+        return view('Master\index');
         
     }
 
@@ -26,7 +26,7 @@ class AdminController extends Controller
     public function create()
     {
         //
-        echo("Ini halaman Create");
+        return view('Master\create');
     }
 
     /**
@@ -61,7 +61,7 @@ class AdminController extends Controller
     public function edit()
     {
         //
-        echo("Ini halaman edit");
+        return view('Master\edit');
     }
 
     /**
@@ -85,6 +85,6 @@ class AdminController extends Controller
     public function destroy()
     {
         //
-        echo("ini halaman destroy");
+        return view('Master\destroy');
     }
 }
